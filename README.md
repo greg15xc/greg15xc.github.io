@@ -191,6 +191,3 @@ footer {
   padding: 10px;
   margin-top: 40px;
 }
-
-// Simple script placeholder for future interactivity
-console.log("Sweet Spot Construction Website Loaded");
