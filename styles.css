@@ -8,7 +8,7 @@ body {
   font-family: “Helvetica Neue”, Arial, sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: green;
+  background-color: black;
 }
 a {
   text-decoration: none;
@@ -152,7 +152,7 @@ button {
 /* Footer */
 .site-footer {
   background-color: #222;
-  color: green;
+  color: black;
   text-align: center;
   padding: 20px;
 }
