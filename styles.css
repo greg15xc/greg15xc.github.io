@@ -34,7 +34,7 @@ a {
 .site-nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .site-nav a {
   color: white;
