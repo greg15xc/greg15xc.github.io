@@ -8,6 +8,7 @@ body {
   font-family: “Helvetica Neue”, Arial, sans-serif;
   color: #333;
   line-height: 1.6;
+  background-color: blue;
 }
 a {
   text-decoration: none;
