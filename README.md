@@ -1,8 +1,3 @@
-Sweet-Spot-Construction/
-├── index.html
-├── style.css
-└── script.js
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
