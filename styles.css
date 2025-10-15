@@ -60,15 +60,6 @@ a {
   text-align: center;
 }
 
-/* Hero Section */
-.hero {
-  background: url('https://via.placeholder.com/1200x600') no-repeat center/cover;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
 }
 .hero-inner h2 {
   font-size: 2.5rem;
