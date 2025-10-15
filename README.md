@@ -1,5 +1,3 @@
-# greg15xc.gethub.io
-
 Sweet-Spot-Construction/
 ├── index.html
 ├── style.css
