@@ -83,6 +83,7 @@ a {
 .about p {
   max-width: 700px;
   margin: 20px 0;
+  color: white;
 }
 
 /* Services */
@@ -95,6 +96,7 @@ a {
   border: 1px solid #ccc;
   padding: 20px;
   border-radius: 8px;
+  color: white;
 }
 .service-item h3 {
   margin-bottom: 10px;
@@ -136,6 +138,7 @@ input, textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: white;
 }
 button {
   display: inline-block;
