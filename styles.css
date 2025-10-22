@@ -146,7 +146,7 @@ a {
 /* Projects list items with green checkboxes */
 .project-card h4 {
   position: relative; 
-  padding-left: 50px; 
+  padding-left: 55px; /* enough space so text isn't blocked */
   background: black;
   text-align: left; 
   color: white;
@@ -155,11 +155,10 @@ a {
   padding: 15px;
   transition: background 0.3s ease;
 }
-
 .project-card h4::before {
   content: "✔"; 
   position: absolute;
-  left: 10px; 
+  left: 15px; /* green box inside left */
   top: 50%;
   transform: translateY(-50%);
   background-color: #4CAF50; 
@@ -173,14 +172,12 @@ a {
   font-size: 16px;
   font-weight: bold;
 }
-
-/* Hover effect for project items */
 .project-card h4:hover {
   background-color: #111;
 }
 .project-card h4:hover::before {
-  background-color: #45a049; /* slightly brighter green on hover */
-  transform: translateY(-50%) scale(1.1); /* small pop effect */
+  background-color: #45a049; 
+  transform: translateY(-50%) scale(1.1);
 }
 
 /* Contact */
