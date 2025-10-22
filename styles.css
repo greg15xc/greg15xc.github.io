@@ -87,7 +87,7 @@ a {
 /* ------------------- Equal spacing for all section titles ------------------- */
 .section h2 {
   margin-bottom: 25px; /* space between title and content */
-  text-align: center;  /* centers all section titles */
+  text-align: center;
 }
 
 /* About */
@@ -110,6 +110,11 @@ a {
   border-radius: 8px;
   color: white;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 .service-item h3 {
   margin-bottom: 10px;
@@ -127,15 +132,55 @@ a {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 .project-card img {
   width: 100%;
   display: block;
 }
+
+/* Projects list items with green checkboxes */
 .project-card h4 {
-  padding: 15px;
+  position: relative; 
+  padding-left: 50px; 
   background: black;
-  text-align: center;
+  text-align: left; 
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 5px; 
+  padding: 15px;
+  transition: background 0.3s ease;
+}
+
+.project-card h4::before {
+  content: "✔"; 
+  position: absolute;
+  left: 10px; 
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #4CAF50; 
+  color: white; 
+  width: 25px; 
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Hover effect for project items */
+.project-card h4:hover {
+  background-color: #111;
+}
+.project-card h4:hover::before {
+  background-color: #45a049; /* slightly brighter green on hover */
+  transform: translateY(-50%) scale(1.1); /* small pop effect */
 }
 
 /* Contact */
@@ -185,22 +230,20 @@ button {
   cursor: pointer;
   gap: 6px;
   background: transparent;
-  border: 2px solid white; /* visible on dark background */
+  border: 2px solid white; 
   border-radius: 5px;
   position: absolute;
   right: 20px;
   top: 25px;
-  z-index: 9999; /* ensures it's above everything */
+  z-index: 9999; 
 }
 .menu-toggle span {
   display: block;
   width: 70%;
   height: 3px;
-  background: white; /* visible lines */
+  background: white; 
   transition: 0.3s ease;
 }
-
-/* Hamburger active animation (turns into X) */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -214,64 +257,52 @@ button {
 /* ------------------- Mobile Layout ------------------- */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex; /* show hamburger icon */
+    display: flex; 
   }
-
   .site-nav {
     width: 100%;
-    display: none; /* hidden by default */
+    display: none; 
     flex-direction: column;
     background-color: #111;
     text-align: center;
     transition: max-height 0.3s ease-in-out;
     overflow: hidden;
   }
-
   .site-nav.show {
-    display: flex; /* toggled when hamburger clicked */
+    display: flex; 
   }
-
   .site-nav ul {
     flex-direction: column;
     gap: 10px;
     padding: 10px 0;
   }
-
   .header-inner {
     flex-direction: column;
   }
-
   .logo {
     height: 100px;
     margin: 0 auto 10px;
   }
-
   .hero {
     height: auto;
     padding: 60px 20px;
   }
-
   .hero-inner h2 {
     font-size: 1.8rem;
   }
-
   .hero-inner p {
     font-size: 1rem;
   }
-
   .services-grid,
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
   .section {
     padding: 40px 15px;
   }
-
   .form-grid {
     grid-template-columns: 1fr;
   }
-
   button {
     width: 100%;
   }
