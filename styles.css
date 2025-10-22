@@ -1,4 +1,4 @@
-/* Base resets & global styles */
+/* ------------------- Base resets & global styles ------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ a {
   color: inherit;
 }
 
-/* Header & Navigation */
+/* ------------------- Header & Navigation ------------------- */
 .site-header {
   background-color: #222;
   color: white;
@@ -52,7 +52,7 @@ a {
   max-width: 100%;
 }
 
-/* Hero background image */
+/* ------------------- Hero background image ------------------- */
 .hero {
   background-image: url('IMG_6227.jpg');
   background-size: cover;
@@ -72,7 +72,7 @@ a {
   font-size: 1.2rem;
 }
 
-/* Sections */
+/* ------------------- Sections ------------------- */
 .section {
   padding: 60px 20px;
   color: white;
@@ -84,11 +84,18 @@ a {
   width: 90%;
 }
 
+/* ------------------- Equal spacing for all section titles ------------------- */
+.section h2 {
+  margin-bottom: 25px; /* space between title and content */
+  text-align: center;  /* centers all section titles */
+}
+
 /* About */
 .about p {
   max-width: 700px;
-  margin: 20px 0;
+  margin: 20px auto 0 auto;
   color: white;
+  text-align: center;
 }
 
 /* Services */
@@ -102,6 +109,7 @@ a {
   padding: 20px;
   border-radius: 8px;
   color: white;
+  text-align: center;
 }
 .service-item h3 {
   margin-bottom: 10px;
@@ -166,25 +174,33 @@ button {
   padding: 20px;
 }
 
-/* --- Hamburger Menu Styles --- */
+/* ------------------- Hamburger Menu Styles ------------------- */
 .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: center;
-  width: 30px;
-  height: 25px;
+  align-items: center;
+  width: 40px;
+  height: 35px;
   cursor: pointer;
-  gap: 5px;
+  gap: 6px;
+  background: transparent;
+  border: 2px solid white; /* visible on dark background */
+  border-radius: 5px;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  z-index: 9999; /* ensures it's above everything */
 }
 .menu-toggle span {
   display: block;
-  width: 100%;
+  width: 70%;
   height: 3px;
-  background: white;
-  transition: 0.3s;
+  background: white; /* visible lines */
+  transition: 0.3s ease;
 }
 
-/* When menu is active (animated X icon) */
+/* Hamburger active animation (turns into X) */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translateY(8px);
 }
@@ -195,28 +211,30 @@ button {
   transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Hide the nav by default on mobile */
+/* ------------------- Mobile Layout ------------------- */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
+    display: flex; /* show hamburger icon */
   }
 
   .site-nav {
     width: 100%;
-    display: none;
+    display: none; /* hidden by default */
     flex-direction: column;
     background-color: #111;
     text-align: center;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+  }
+
+  .site-nav.show {
+    display: flex; /* toggled when hamburger clicked */
   }
 
   .site-nav ul {
     flex-direction: column;
     gap: 10px;
     padding: 10px 0;
-  }
-
-  .site-nav.show {
-    display: flex;
   }
 
   .header-inner {
@@ -230,4 +248,47 @@ button {
 
   .hero {
     height: auto;
-    padding:
+    padding: 60px 20px;
+  }
+
+  .hero-inner h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-inner p {
+    font-size: 1rem;
+  }
+
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .hero-inner h2 {
+    font-size: 1.4rem;
+  }
+  .hero-inner p {
+    font-size: 0.9rem;
+  }
+  .site-title {
+    font-size: 1.4rem;
+  }
+  .logo {
+    height: 80px;
+  }
+}
