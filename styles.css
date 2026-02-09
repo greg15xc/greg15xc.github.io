@@ -289,7 +289,7 @@ button {
   }
   .hero {
     height: auto;
-    padding: 60px 20px;
+    padding-top: 280px; /* more room for logo + menu */
   }
   .hero-inner h2 {
     font-size: 1.8rem;
