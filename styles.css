@@ -52,7 +52,9 @@ a {
   max-width: 100%;
 }
 .logo-wrap{
-  background: white:
+  background: white;
+  padding: 10px;
+  display:inline-block;
 }
 /* ------------------- Hero background image ------------------- */
 .hero {
