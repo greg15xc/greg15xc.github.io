@@ -288,8 +288,12 @@ button {
     margin: 0 auto 10px;
   }
   .hero {
-    height: auto;
-    padding-top: 280px; /* more room for logo + menu */
+    height: auto;          /* let hero expand naturally */
+    padding-top: 0;        /* remove fixed padding; JS will handle spacing */
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* ensures padding works */
   }
   .hero-inner h2 {
     font-size: 1.8rem;
