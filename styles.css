@@ -50,9 +50,10 @@ a {
   margin-right: 60px;
   vertical-align: middle;
   max-width: 100%;
-  background-color: white;
 }
-
+.logo-wrap{
+  background: white:
+}
 /* ------------------- Hero background image ------------------- */
 .hero {
   background-image: url('IMG_6227.jpg');
