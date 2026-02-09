@@ -63,8 +63,8 @@ a {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('IMG_6227.jpg');
   background-size: cover;
   background-position: center;
-  padding-top: 200px;
   height: 60vh;
+  padding-top: 200px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
