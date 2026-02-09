@@ -295,6 +295,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: flex-start; /* ensures padding works */
+    margin-top: -40px;
   }
   .hero-inner h2 {
     font-size: 1.8rem;
