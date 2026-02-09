@@ -111,5 +111,19 @@
     </div>
   </footer>
 
+  <script>
+  function adjustHeroPadding() {
+    const header = document.querySelector('.site-header');
+    const hero = document.querySelector('.hero');
+    if(header && hero){
+      const headerHeight = header.offsetHeight;
+      hero.style.paddingTop = (headerHeight + 40) + 'px'; // 40px breathing room
+    }
+  }
+
+  window.addEventListener('load', adjustHeroPadding);
+  window.addEventListener('resize', adjustHeroPadding);
+</script>
+
 </body>
 </html>
