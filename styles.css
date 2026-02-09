@@ -17,9 +17,11 @@ a {
 
 /* ------------------- Header & Navigation ------------------- */
 .site-header {
-  background-color: #222;
-  color: white;
-  position: relative;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 .header-inner {
   max-width: 1100px;
