@@ -1011,7 +1011,7 @@ footer p {
     });
 
     /* ── Send Message ── */
-    document.getElementById('sendBtn').addEventListener('click', function() {
+    document.getElementById('sendBtn').addEventListener('click', async function() {
       var fname   = document.getElementById('fname').value.trim();
       var lname   = document.getElementById('lname').value.trim();
       var email   = document.getElementById('email').value.trim();
@@ -1023,19 +1023,19 @@ footer p {
         return;
       }
 
-      var subject = 'New Project Inquiry - ' + service;
-      var body    = 'Name: ' + fname + ' ' + lname + '\n'
-                  + 'Email: ' + email + '\n'
-                  + 'Project Type: ' + service + '\n\n'
-                  + 'Project Details:\n' + message;
+      this.textContent = 'Sending…';
 
-      var link = document.createElement('a');
-      link.href = 'mailto:greg@sweetspotconstruction.com'
-                + '?subject=' + encodeURIComponent(subject)
-                + '&body='    + encodeURIComponent(body);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      const res = await fetch('https://formspree.io/f/maqzeegk', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: fname + ' ' + lname, email, service, message })
+      });
+
+      if (res.ok) {
+        this.textContent = 'Message Sent ✓';
+      } else {
+        this.textContent = 'Error — try again';
+      }
     });
   </script>
 
